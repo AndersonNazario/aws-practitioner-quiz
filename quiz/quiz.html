@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário AWS</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header id="cabecalho-principal">
+        <strong>AWS Cloud Practitioner</strong>
+        <a href="../index.html" id="link-sobre" style="text-decoration: none;">Sobre o Projeto</a>
+    </header>
+
+    <!-- TELA INICIAL -->
+    <div class="container" id="tela-inicial">
+        <h2 style="text-align: center;">Bem-vindo ao Questionário</h2>
+        
+        <div class="grupo-input">
+            <label for="nome-usuario">Qual é o seu nome?</label>
+            <input type="text" id="nome-usuario" placeholder="Digite seu nome">
+        </div>
+
+        <div class="grupo-input">
+            <label for="qtd-perguntas">Quantas perguntas deseja responder?</label>
+            <input type="number" id="qtd-perguntas" min="1" placeholder="Ex: 10">
+            <small id="max-perguntas-aviso" style="display: block; margin-top: 5px; color: #6B7280;"></small>
+        </div>
+
+        <button id="btn-comecar" style="width: 100%; margin-top: 10px;">Começar Questionário</button>
+    </div>
+
+    <!-- TELA DO QUIZ -->
+    <div class="container" id="tela-quiz" style="display: none;">
+        <div id="cabecalho-quiz">
+            <span id="pergunta-id">ID: </span>
+            <span id="progresso-quiz" style="float: right; font-weight: bold; color: #2563EB;"></span>
+        </div>
+        
+        <div id="pergunta-container">
+            <h2 id="pergunta-texto">A pergunta aparecerá aqui</h2>
+            <div id="opcoes-container"></div>
+            <div id="feedback-container" style="display: none;"></div>
+        </div>
+        <div class="controles">
+            <button id="btn-voltar" disabled>Voltar</button>
+            <button id="btn-proximo">Validar</button>
+        </div>
+    </div>
+
+    <script src="../js/dados.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

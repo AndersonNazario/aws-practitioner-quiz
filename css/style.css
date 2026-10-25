@@ -6,12 +6,14 @@
 
 body {
     font-family: Arial, sans-serif;
+    /* Alterado de height: 100vh para min-height para permitir scroll em telas pequenas */
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: #F3F4F6;
     color: #1F2937;
+    padding: 20px 10px; /* Cria uma margem de segurança ao redor da tela inteira no mobile */
 }
 
 .container {
@@ -21,6 +23,7 @@ body {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     width: 100%;
     max-width: 600px;
+    margin: auto; /* Garante centralização correta em modo scroll */
 }
 
 h2 {
@@ -223,8 +226,10 @@ button:disabled {
     border-bottom: 2px solid #E5E7EB;
     padding-bottom: 5px;
 }
+/* =========================================
+   * Link de Estudo *
+========================================= */
 
-/* Link de Estudo */
 .link-estudo {
     display: flex;
     align-items: center;
@@ -241,8 +246,10 @@ button:disabled {
 .link-estudo:hover {
     background-color: #DBEAFE;
 }
+/* =========================================
+   * Botões Redes Sociais *
+========================================= */
 
-/* Botões Redes Sociais */
 .redes-sociais {
     display: flex;
     gap: 15px;
@@ -283,8 +290,10 @@ button:disabled {
     height: 20px;
     fill: currentColor;
 }
+/* =========================================
+* Botão Iniciar (Página Principal) *
+========================================= */
 
-/* Botão Iniciar (Página Principal) */
 .btn-iniciar {
     display: block;
     width: 100%;
@@ -305,4 +314,18 @@ button:disabled {
     background-color: #047857; /* Verde mais escuro no hover */
     transform: translateY(-2px);
     box-shadow: 0 6px 8px -2px rgba(5, 150, 105, 0.3);
+}
+/* =========================================
+  * Ajuste específico para celulares (telas menores que 600px) *
+========================================= */
+
+@media (max-width: 600px) {
+    body {
+        align-items: flex-start; /* Permite ler do topo para baixo sem cortar informações superiores */
+        padding: 10px;
+    }
+
+    .container, .sobre-card {
+        padding: 15px; /* Reduz o espaçamento interno para aproveitar melhor a tela do celular */
+    }
 }
